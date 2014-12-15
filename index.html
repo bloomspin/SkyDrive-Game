@@ -17,9 +17,9 @@
 <script>
 var $ = jQuery;
 var game;
+var screenW = $(window).width();
+var screenH = $(window).height();
 (function() {
-    var screenW = $(window).width();
-	var screenH = $(window).height();
 	game =new Phaser.Game(screenW, screenH, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update });
 })();
 </script>

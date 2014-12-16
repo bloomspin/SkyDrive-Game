@@ -25,7 +25,7 @@ function player_create() {
 
 function player_update() {
 
-	
+	//Game Controls
     if (cursors.up.isDown)
     {
 
@@ -45,5 +45,12 @@ function player_update() {
     {
         player.body.velocity.x +=5;
     }
+	console.log(game.world);
+	
+	//When on the ground stop all X velocity
+	if(player.body.y+player.body.height==game.world.bounds.height){
+		player.body.velocity.x=0
+	}
+	
 
 }

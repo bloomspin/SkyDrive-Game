@@ -49,7 +49,7 @@ function player_update() {
 	
 	//When on the ground stop all X velocity
 	if(player.body.y+player.body.height==game.world.bounds.height){
-		player.body.velocity.x=0
+		//player.body.velocity.x=0
 	}
 	
 

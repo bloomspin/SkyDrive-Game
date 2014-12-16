@@ -15,7 +15,7 @@ function create() {
 	game.physics.arcade.gravity.y = 250;
    
 	//Game Objects
-	player_create();
+	player_create(200,screenH*10);
 	clouds_create();
 	
 	

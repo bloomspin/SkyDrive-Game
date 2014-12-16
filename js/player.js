@@ -6,10 +6,10 @@ function player_preload() {
 
 }
 
-function player_create() {
+function player_create(startX,startY) {
 
 	//Physics
-	player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
+	player = game.add.sprite(startX, startY, 'player');
 	game.physics.enable( player, Phaser.Physics.ARCADE);
 	
 	player.body.allowGravity = true;

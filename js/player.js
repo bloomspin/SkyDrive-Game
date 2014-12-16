@@ -1,5 +1,10 @@
 var player;
 
+function player_preload() {
+
+    game.load.image('player', '../assets/images/player1.png');
+
+}
 
 function player_create() {
 
@@ -33,12 +38,12 @@ function player_update() {
 
     if (cursors.left.isDown)
     {
-        player.body.velocity.x -=20;
+        player.body.velocity.x -=5;
 				
     }
     else if (cursors.right.isDown)
     {
-        player.body.velocity.x +=20;
+        player.body.velocity.x +=5;
     }
 
 }

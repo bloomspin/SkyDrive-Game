@@ -1,5 +1,5 @@
 function preload() {
-
+	clouds_preload()
 
 }
 

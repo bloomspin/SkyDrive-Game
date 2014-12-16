@@ -1,12 +1,13 @@
 function preload() {
-	    
+	    clouds_preload();
+		player_preload();
 
 }
 
 function create() {
 	
 	//World
-	game.world.setBounds(0, 0, screenW*2, screenH*20);
+	game.world.setBounds(0, 0, screenW*20, screenH*10);
 	game.stage.backgroundColor = 0x1acee9;
 	
 	//physics

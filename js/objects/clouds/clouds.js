@@ -1,6 +1,6 @@
 function clouds_preload() {
 
-    game.load.image('cloud1', 'assets/images/cloud1.png');
+    game.load.image('cloud1', '../assets/images/cloud1.png');
 
 }
 
@@ -12,30 +12,31 @@ var max = 2;
 var xx = [];
 var yy = [];
 var zz = [];
-
+var ss = [];
 function clouds_create() {
 
     if (game.renderType === Phaser.WEBGL)
     {
-        max = 200;
+        max = 500;
     }
 
     var sprites = game.add.spriteBatch();
 
-    stars = [];
+    clouds = [];
 
     for (var i = 0; i < max; i++)
     {
-        xx[i] = Math.floor(Math.random() * (screenW*2)) + 0;
-        yy[i] = Math.floor(Math.random() * (screenH*20)) + 0;
+        xx[i] = Math.floor(Math.random() * (screenW*20)) + 0;
+        yy[i] = Math.floor(Math.random() * (screenH*10)) + 0;
         zz[i] = Math.floor(Math.random() * 1700) - 100;
+		ss[i] = Math.floor(Math.random() * 100) + 10;
 		
-        var star = game.make.sprite( xx[i], yy[i], 'cloud1');
-        star.anchor.set(0.5);
-		star.scale.set(1);
-        sprites.addChild(star);
+        var cloud = game.make.sprite( xx[i], yy[i], 'cloud1');
+        cloud.anchor.set(0.5);
+		cloud.scale.set(ss[i]/100);
+        sprites.addChild(cloud);
 
-        stars.push(star);
+        clouds.push(cloud);
     }
 		
 	
